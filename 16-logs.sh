@@ -30,7 +30,7 @@ if [ $USERID -ne 0 ]; then
     VALIDATE $? "mysql"
     else
      echo -e "mysql already exist....$Y skipping $N"
-
+fi
     dnf list installed nginx &>>$LOG_FILE
     if [ $? -ne 0 ]; then
 
@@ -39,6 +39,6 @@ if [ $USERID -ne 0 ]; then
     else
      echo -e "nginx already exist....$Y skipping $N"
     fi
-    
+
 
 
