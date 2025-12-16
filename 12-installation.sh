@@ -13,3 +13,4 @@ if [ $USERID -ne 0 ]; then
         else 
          echo "installaing mysql success"  
          fi
+         
