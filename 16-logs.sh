@@ -39,5 +39,6 @@ if [ $USERID -ne 0 ]; then
     else
      echo -e "nginx already exist....$Y skipping $N"
     fi
+    
 
 
