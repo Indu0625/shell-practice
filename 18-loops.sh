@@ -27,6 +27,16 @@ if [ $USERID -ne 0 ]; then
     for package in $@
     do
     echo "package is: $package"
+
+    dnf installed $package &>>$LOG_FILE
+
+    if [$? -ne 0]; then
+        dnf installed $package -y &>>LOG_FILE
+        VALIDATE $? "$package"
+    else
+    echo -e "$package already installed...$Y SKIPPING $N"
+    fi
     done
+    
 
     
